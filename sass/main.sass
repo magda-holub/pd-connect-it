@@ -31,13 +31,20 @@ body
         //awards
         &-awards
             @include flexOr
-            justify-content: space-evenly
+            gap: 92px
+            justify-content: center
             align-items: center
 
             &--image
+                height: 160px
+                width: 300px
+                @include flexOr
+                justify-content: center
+                align-items: center
 
                 img
-                    height: 160px
+                    max-width: 300px
+                    max-height: 160px
 
         //header
         &-header
