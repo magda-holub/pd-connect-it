@@ -1,0 +1,354 @@
+<!-- preview -->
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>alza</title>
+<link rel="stylesheet" href="sass/main.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="layout_switch">
+<button type="button">M</button>
+<button type="button">3</button>
+<button type="button">4</button>
+</div>
+<div id="testLayout" class="layout-1">
+<div id="legend">
+
+
+<!-- stylesheet
+<link rel="stylesheet" href="https://cdn.alza.cz/Foto/LegendFoto/EN/Files/sablona/itconnect/main.min.css"> -->
+
+<!-- article -->
+<div id="celek">
+    <div class="pp-container">
+
+        <!-- header -->
+        <div class="pp-header pp-column" data-act="block">
+
+            <!-- header headline -->
+            <div class="pp-header--headline" data-act="block">
+                <h2 class="hdl2" data-act="edit">Header - nadpis</h2>
+            </div>
+            
+            <!-- header text -->
+            <div class="pp-header--text" data-act="block">
+                <p class="text__normal" data-act="edit">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam rhoncus aliquam metus. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Aliquam id dolor. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Fusce nibh. Integer tempor. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Proin mattis lacinia justo.</p>
+            </div>
+
+            <!-- header image -->
+            <div class="pp-header--image" data-act="block">
+                <figure>
+                    <div data-act="img">
+                        <img src="img/mouse/mouse1.jpg">
+                    </div>
+                </figure>
+            </div>
+
+        </div>
+
+         <!-- awards -->
+         <div class="pp-awards pp-column" data-act="block">
+            <div class="pp-awards--image" data-act="block">
+                <figure>
+                    <div data-act="img">
+                        <img src="img/kapitan-demo/COMPUTER_9.png">
+                    </div>
+                </figure>
+            </div>
+            <div class="pp-awards--image" data-act="block">
+                <figure>
+                    <div data-act="img">
+                        <img src="img/kapitan-demo/Bez názvu_43.png">
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <!-- plain text -->
+        <div class="pp-plaintext pp-column" data-act="block">
+
+            <!-- plain text headline -->
+            <div class="pp-plaintext--headline" data-act="block">
+                <p class="hdl3" data-act="edit">Delší samostatný text - nadpis</p>
+            </div>
+
+            <!-- plain text text -->
+            <div class="pp-plaintext--text" data-act="block">
+                <p class="text__normal" data-act="edit">Vivamus luctus egestas leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Pellentesque arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus. Aliquam ornare wisi eu metus.</p>
+            </div>
+
+        </div>
+
+        <!-- single image -->
+        <div class="pp-singleimage pp-column" data-act="block">
+
+            <!-- simgle image image -->
+            <div class="singleimage--image" data-act="block">
+                <figure>
+                    <div data-act="img">
+                        <img src="img/mouse/mouse2.jpg">
+                    </div>
+                </figure>
+            </div>
+
+        </div>
+
+        <!-- multiple texts -->
+        <div class="pp-multipletexts pp-column" data-act="block">
+
+            <!-- multiple texts text-unit -->
+            <div class="pp-multipletexts--unit" data-act="block">
+                <div class="pp-multipletexts--headline">
+                    <h3 class="hdl3" data-act="edit">Kratší samostatný text (bez obrázku) - nadpis</h3>
+                </div>
+                <div class="pp-multipletexts--text">
+                    <p class="text__normal" data-act="edit">Nullam dapibus fermentum ipsum. Suspendisse nisl. Maecenas lorem. Integer tempor. Phasellus faucibus molestie nisl. Nunc dapibus tortor vel mi dapibus sollicitudin.</p>
+                </div>
+            </div>
+
+            <!-- multiple texts text-unit -->
+            <div class="pp-multipletexts--unit" data-act="block">
+                <div class="pp-multipletexts--headline">
+                    <h3 class="hdl3" data-act="edit">Kratší samostatný text (bez obrázku) - nadpis</h3>
+                </div>
+                <div class="pp-multipletexts--text">
+                    <p class="text__normal" data-act="edit">Nullam dapibus fermentum ipsum. Suspendisse nisl. Maecenas lorem. Integer tempor. Phasellus faucibus molestie nisl. Nunc dapibus tortor vel mi dapibus sollicitudin.</p>
+                </div>
+            </div>
+
+            <!-- multiple texts text-unit -->
+            <div class="pp-multipletexts--unit" data-act="block">
+                <div class="pp-multipletexts--headline">
+                    <h3 class="hdl3" data-act="edit">Kratší samostatný text (bez obrázku) - nadpis</h3>
+                </div>
+                <div class="pp-multipletexts--text">
+                    <p class="text__normal" data-act="edit">Nullam dapibus fermentum ipsum. Suspendisse nisl. Maecenas lorem. Integer tempor. Phasellus faucibus molestie nisl. Nunc dapibus tortor vel mi dapibus sollicitudin.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- video -->
+        <div class="pp-video" data-act="block">
+
+            <!-- video changer -->
+            <div class="pp-addons video-select" >
+                <h3 class="hdl3">Video source input</h3>
+                <p class="text__normal">Vložte pouze ID videa např. <strong>t1DueZkQc1I</strong></p>
+                <input type="text" class="video-select__videoID" placeholder="t1DueZkQc1I">
+                <div class="alza-btn alza-btn__green alza-btn__normal__fixed">
+                    <div class="btn-text">Změnit video</div>
+                </div>
+            </div>
+
+            <!-- video container -->
+            <div class="pp-video--container" contenteditable="false">
+                <iframe src="https://www.youtube.com/embed/NeKB0jvChv8" frameborder="0" width="100%" height="600"></iframe>
+            </div>
+            <div id="pp-video--overlay" class="pp-video--overlay"></div>
+        </div>
+
+
+        <!-- zigzag -->
+        <div class="pp-zigzag pp-column" data-act="block">
+
+            <!-- zigzag unit -->
+            <div class="pp-zigzag--unit" data-act="block">
+                <div class="pp-zigzag--caption">
+                    <h3 class="hdl3" data-act="edit">Kratší text (s obrázkem) - nadpis</h3>
+                    <p class="text__normal" data-act="edit">Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Duis viverra diam non justo. In rutrum. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Aenean placerat. Nulla est.</p>
+                </div>
+                <div class="pp-zigzag--image">
+                    <figure>
+                        <div data-act="img">
+                            <img src="img/mouse/mouse2.jpg">
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- zigzag unit -->
+            <div class="pp-zigzag--unit" data-act="block">
+                <div class="pp-zigzag--caption">
+                    <h3 class="hdl3" data-act="edit">Kratší text (s obrázkem) - nadpis</h3>
+                    <p class="text__normal" data-act="edit">Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Duis viverra diam non justo. In rutrum. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Aenean placerat. Nulla est.</p>
+                </div>
+                <div class="pp-zigzag--image">
+                    <figure>
+                        <div data-act="img">
+                            <img src="img/mouse/mouse4.jpg">
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- zigzag unit -->
+            <div class="pp-zigzag--unit" data-act="block">
+                <div class="pp-zigzag--caption">
+                    <h3 class="hdl3" data-act="edit">Kratší text (s obrázkem) - nadpis</h3>
+                    <p class="text__normal" data-act="edit">Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Duis viverra diam non justo. In rutrum. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Aenean placerat. Nulla est.</p>
+                </div>
+                <div class="pp-zigzag--image">
+                    <figure>
+                        <div data-act="img">
+                            <img src="img/mouse/mouse2.jpg">
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- key features -->
+        <div class="pp-features pp-column" data-act="block">
+
+            <!-- features headline -->
+            <div class="pp-features--headline">
+                <h4 class="hdl4" data-act="edit">Klíčové vlastnosti produktu (s obrázkem) - nadpis</h4>
+            </div>
+
+            <!-- features unit -->
+            <div class="pp-features--unit">
+                <div class="pp-features--img">
+                    <figure>
+                        <div data-act="img">
+                            <img src="img/mouse/mouse-product.jpg">
+                        </div>
+                    </figure>
+                </div>
+                <ul class="pp-features--list">
+                    <li class="pp-features--listitem" data-act="block">
+                        <div class="pp-features--marker">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p class="text__normal" data-act="edit">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+                    </li>
+                    <li class="pp-features--listitem" data-act="block">
+                        <div class="pp-features--marker">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p class="text__normal" data-act="edit">Phasellus enim erat, vestibulum vel</p>
+                    </li>
+                    <li class="pp-features--listitem" data-act="block">
+                        <div class="pp-features--marker">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p class="text__normal" data-act="edit">In dapibus augue non sapien</p>
+                    </li>
+                    <li class="pp-features--listitem" data-act="block">
+                        <div class="pp-features--marker">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p class="text__normal" data-act="edit">Ut enim ad minim veniam</p>
+                    </li>
+                    <li class="pp-features--listitem" data-act="block">
+                        <div class="pp-features--marker">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p class="text__normal" data-act="edit">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egesta</p>
+                    </li>
+                    <li class="pp-features--listitem" data-act="block">
+                        <div class="pp-features--marker">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p class="text__normal" data-act="edit">Aenean id metus id velit ullamcorper pulvinar. Nullam faucibus mi quis velit</p>
+                    </li>
+                    <li class="pp-features--listitem" data-act="block">
+                        <div class="pp-features--marker">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p class="text__normal" data-act="edit">Nulla pulvinar eleifend sem</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- specifications -->
+        <div class="pp-specs pp-column" data-act="block">
+
+            <!-- specifications headline -->
+            <div class="pp-specs--headline">
+                <h4 class="hdl4" data-act="edit">Detailní specifikace (bez obrázku) - nadpis</h4>
+            </div>
+
+            <!-- specifications list -->
+            <ul class="pp-specs--list">
+                <li class="pp-specs--listitem" data-act="block">
+                    <div class="pp-specs--marker">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="text__normal" data-act="edit">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+                </li>
+                <li class="pp-specs--listitem" data-act="block">
+                    <div class="pp-specs--marker">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="text__normal" data-act="edit">Phasellus enim erat, vestibulum vel</p>
+                </li>
+                <li class="pp-specs--listitem" data-act="block">
+                    <div class="pp-specs--marker">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="text__normal" data-act="edit">In dapibus augue non sapien</p>
+                </li>
+                <li class="pp-specs--listitem" data-act="block">
+                    <div class="pp-specs--marker">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="text__normal" data-act="edit">Ut enim ad minim veniam</p>
+                </li>
+                <li class="pp-specs--listitem" data-act="block">
+                    <div class="pp-specs--marker">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="text__normal" data-act="edit">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egesta</p>
+                </li>
+                <li class="pp-specs--listitem" data-act="block">
+                    <div class="pp-specs--marker">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="text__normal" data-act="edit">Aenean id metus id velit ullamcorper pulvinar. Nullam faucibus mi quis velit</p>
+                </li>
+                <li class="pp-specs--listitem" data-act="block">
+                    <div class="pp-specs--marker">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="text__normal" data-act="edit">Nulla pulvinar eleifend sem</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!-- script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/switcher.js"></script>
+<script src="js/video-select.js"></script>
+<!-- <script src="js/script.js"></script> -->
+<!-- <script type="text/javascript" src="https://cdn.alza.cz/Foto/LegendFoto/EN/Files/js/injektace_css_scriptu_vzdalene.js" async="async"></script> -->
+
+
+
+<!-- preview -->
+</div>
+</div>
+</body>
+</html>

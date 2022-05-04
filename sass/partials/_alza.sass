@@ -1,0 +1,12 @@
+#celek
+    .alza
+        &-btn
+            &__green
+                background-color: $c-green-sport
+                color: $c-white
+                @include btnStates($c-green-sport)
+
+            &__normal
+                &__fixed
+                    @include btnAppearance(42, 14)
+                    padding: 0 15px

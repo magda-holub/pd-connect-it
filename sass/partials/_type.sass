@@ -1,0 +1,43 @@
+.hdl2
+    @include type(30px, 1.25, 700)
+    color: $c-aruba
+
+.hdl3
+    @include type(26px, 1.25, 500)
+    color: $c-aruba
+
+.hdl4
+    @include type(16px, 1.25, 500)
+
+.text__normal
+    @include type(16px, 1.5, 400)
+
+// layout 0
+.layout-0 #celek
+    .hdl2
+        @include type(26px, 1.25, 700)
+
+    .hdl3
+        @include type(22px, 1.25, 500)
+
+    .hdl4
+        @include type(14px, 1.25, 500)
+
+    .text__normal
+        @include type(14px, 1.5, 400)
+
+//querries
+@media only screen and (max-width: 975px)
+    .mobile #celek,
+    .mobileapp #celek
+        .hdl2
+            @include type(26px, 1.25, 700)
+
+        .hdl3
+            @include type(22px, 1.25, 500)
+
+        .hdl4
+            @include type(14px, 1.25, 500)
+
+        .text__normal
+            @include type(14px, 1.5, 400)

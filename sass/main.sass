@@ -1,0 +1,338 @@
+@import ../sass/partials/mixins
+@import ../sass/partials/colors
+@import ../sass/partials/type
+@import ../sass/partials/reset
+@import ../sass/partials/alza
+@import ../sass/partials/addons
+@import ../sass/partials/video-select
+@import ../sass/partials/switcher
+
+
+//preview - TO REMOVE!
+body
+    background-color: $c-blue-light
+
+#celek
+    @include roboto
+    text-align: center
+    background-color: $c-white
+    color: $c-grey-6
+    position: relative
+
+    .pp
+        &-container
+            @include flexVert
+            gap: 48px
+            padding: 48px 0
+
+        &-column
+            padding: 0 136px
+
+        //awards
+        &-awards
+            @include flexOr
+            justify-content: space-evenly
+            align-items: center
+
+            &--image
+
+                img
+                    height: 160px
+
+        //header
+        &-header
+            @include flexVert
+            gap: 32px
+
+        //plaintext
+        &-plaintext
+            @include flexVert
+            gap: 24px
+
+        //multiple texts
+        &-multipletexts
+            @include flexOr
+            flex-wrap: wrap
+            justify-content: center
+            gap: 48px
+
+            &--unit
+                width: calc((100% - 48px) / 2 )
+                @include flexVert
+                gap: 24px
+
+            &--headline
+                height: 48px
+
+        //video
+        &-video
+            padding: 48px 136px
+            background-color: $c-grey-1
+
+            &--container
+                position: relative
+                padding-top: 56.25%
+                height: 0
+                z-index: 10
+                transition: all 300ms ease-in-out
+
+                &:hover
+                    transform: scale(1.05)
+
+                    & + .pp-video--overlay
+                        opacity: 30%
+                        visibility: visible
+
+                iframe
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    max-width: 100%
+                    margin: 0 auto
+                    border-radius: 4px
+                    border: 10px solid #fff
+                    box-shadow: 0 1px 4px 0px rgba(0,0,0,0.15)
+                    left: 50%
+                    transform: translateX(-50%)
+            
+            &--overlay
+                visibility: hidden
+                opacity: 0
+                background-color: $c-black
+                position: absolute
+                height: 100%
+                width: 100%
+                top: 0
+                left: 0
+                transition: all 300ms ease-in-out
+
+        //zigzag
+        &-zigzag
+            @include flexVert
+            gap: 48px
+
+            &--unit
+                @include flexOr
+                gap: 48px
+
+                &:nth-child(odd) .pp-zigzag--caption
+                    order: 1
+            
+            &--image, &--caption
+                    flex: 1 1 0
+
+            &--image
+                transition: all 300ms ease-in-out
+
+                &:hover
+                    transform: scale(1.05)
+
+            &--caption
+                background-color: $c-grey-1
+                @include flexVert
+                justify-content: center
+                gap: 24px
+
+                h3
+                    margin: 48px 48px 0 48px
+
+                p
+                    margin: 0 48px 48px 48px
+
+        //features
+        &-features
+            @include flexVert
+            gap: 24px
+            text-align: left
+
+            &--headline
+                width: 100%
+                background-color: $c-grey-1
+                padding: 24px 48px
+
+            &--unit
+                @include flexOr
+                align-items: center
+                gap: 48px
+
+            &--img, &--list
+                    flex: 1 1 0
+
+            &--list
+                @include flexVert
+                gap: 24px
+                list-style-type: none
+
+            &--listitem
+                @include flexOr
+                gap: 12px
+
+                &:hover .pp-features--marker span
+                    transform: rotate(90deg)
+
+                    &:nth-of-type(2)
+                        transform: rotate(180deg)
+                        
+            &--marker
+                position: relative
+                margin-right: 16px
+
+                span
+                    width: 12px
+                    height: 2px
+                    background-color: $c-aruba
+                    display: block
+                    position:  absolute
+                    top: 12px
+                    left: 0
+                    transition: all 300ms ease-in-out
+
+                    &:nth-of-type(2)
+                        transform: rotate(90deg)
+
+        //specifications
+        &-specs
+            @include flexVert
+            gap: 24px
+            text-align: left
+
+            &--headline
+                width: 100%
+                background-color: $c-grey-1
+                padding: 24px 48px
+
+            &--list
+                @include flexVert
+                gap: 24px
+                list-style-type: none
+                margin-left: 20px
+
+            &--listitem
+                @include flexOr
+                gap: 12px
+
+                &:hover .pp-specs--marker span
+                    transform: rotate(90deg)
+
+                    &:nth-of-type(2)
+                        transform: rotate(180deg)
+
+            &--marker
+                position: relative
+                margin-right: 16px
+
+                span
+                    width: 12px
+                    height: 2px
+                    background-color: $c-aruba
+                    display: block
+                    position:  absolute
+                    top: 12px
+                    left: 0
+                    transition: all 300ms ease-in-out
+
+                    &:nth-of-type(2)
+                        transform: rotate(90deg)
+
+// layout 0
+.layout-0 #celek
+    .pp
+        &-column
+            padding: 0 48px
+
+        &-video
+            padding: 48px
+                        
+        &-features--marker span, &-specs--marker span
+            top: 10px
+
+//querries
+@media only screen and (max-width: 975px)
+    .mobile #celek,
+    .mobileapp #celek
+        .pp
+            &-column
+                padding: 0 32px
+
+            &-multipletexts
+                &--headline
+                    height: 60px
+
+            &-video
+                padding: 0 32px
+                background-color: $c-white
+
+                &--container:hover
+                    transform: none
+
+                &--overlay
+                    display: none
+
+            &-zigzag
+                background-color: $c-grey-1
+                padding: 48px 32px
+
+                &--unit
+                    flex-direction: column
+
+                    &:nth-child(odd) .pp-zigzag--caption
+                        order: 0
+
+                &--caption
+                    h3, p
+                        margin: 0
+
+                &--image:hover
+                    transform: none
+
+            &-features
+                &--unit
+                    flex-direction: column
+                
+                &--list
+                    margin-left: 20px
+
+            &-features--marker span, &-specs--marker span
+                top: 10px
+
+@media only screen and (max-width: 600px)
+    .mobile #celek,
+    .mobileapp #celek
+        .pp
+            &-multipletexts
+                flex-direction: column
+
+                &--unit
+                    width: 100%
+
+            &-video
+                padding: 0
+
+                iframe
+                    box-shadow: none
+
+@media only screen and (max-width: 400px)
+    .mobile #celek,
+    .mobileapp #celek
+        .pp
+            &-features
+                &--headline
+                    padding: 24px
+
+                &--list
+                    margin-left: 0
+
+                &--listitem
+                    gap: 7px
+
+            &-specs
+                &--headline
+                    padding: 24px
+
+                &--list
+                    margin-left: 0
+
+                &--listitem
+                    gap: 7px
