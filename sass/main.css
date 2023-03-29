@@ -373,6 +373,7 @@ body {
 #celek .pp-video {
   padding: 48px 136px;
   background-color: #f4f5f5;
+  position: relative;
 }
 
 #celek .pp-video--container {
@@ -695,6 +696,20 @@ body {
   .mobileapp #celek .pp-column {
     padding: 0 32px;
   }
+  .mobile #celek .pp-awards,
+  .mobileapp #celek .pp-awards {
+    gap: 48px;
+  }
+  .mobile #celek .pp-awards--image,
+  .mobileapp #celek .pp-awards--image {
+    height: 96px;
+    width: 200px;
+  }
+  .mobile #celek .pp-awards--image img,
+  .mobileapp #celek .pp-awards--image img {
+    max-width: 200px;
+    max-height: 96px;
+  }
   .mobile #celek .pp-multipletexts--headline,
   .mobileapp #celek .pp-multipletexts--headline {
     height: 60px;
@@ -760,6 +775,11 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  .mobile #celek .pp-awards,
+  .mobileapp #celek .pp-awards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .mobile #celek .pp-multipletexts,
   .mobileapp #celek .pp-multipletexts {
     -webkit-box-orient: vertical;

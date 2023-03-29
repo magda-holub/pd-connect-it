@@ -1,3 +1,4 @@
+@import ../sass/partials/trial
 @import ../sass/partials/mixins
 @import ../sass/partials/colors
 @import ../sass/partials/type
@@ -75,6 +76,7 @@ body
         &-video
             padding: 48px 136px
             background-color: $c-grey-1
+            position: relative
 
             &--container
                 position: relative
@@ -263,6 +265,17 @@ body
             &-column
                 padding: 0 32px
 
+            &-awards
+                gap: 48px
+
+                &--image
+                    height: 96px
+                    width: 200px
+
+                    img
+                        max-width: 200px
+                        max-height: 96px
+
             &-multipletexts
                 &--headline
                     height: 60px
@@ -308,6 +321,9 @@ body
     .mobile #celek,
     .mobileapp #celek
         .pp
+            &-awards
+                flex-wrap: wrap
+
             &-multipletexts
                 flex-direction: column
 
