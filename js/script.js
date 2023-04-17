@@ -1,23 +1,57 @@
-//layout switcher
-$("#layout_switch button").on("click", function () {
-    $("#testLayout").removeClass("layout-0").removeClass("layout-1");
-    $("body").addClass("mobile");
+//switcher
+var switcher = document.querySelector("#layout_switch"),
+    buttons = switcher.querySelectorAll("button"),
+    testLayout = document.querySelector("#testLayout"),
+    body = document.body;
+
+switcher.querySelectorAll("button")[0].addEventListener("click", function () {
+    testLayout.classList.remove("layout-0", "layout-1");
+    body.classList.add("mobile");
+    buttons.forEach(function (button) {
+        button.classList.remove("active")
+    });
+    this.classList.add("active");
+
 });
-$("#layout_switch button:nth-child(2)").on("click", function () {
-    $("#testLayout").addClass("layout-0");
-    $("body.mobile").removeClass("mobile");
+
+switcher.querySelectorAll("button")[1].addEventListener("click", function () {
+    testLayout.classList.remove("layout-1");
+    body.classList.remove("mobile");
+    testLayout.classList.add("layout-0");
+    buttons.forEach(function (button) {
+        button.classList.remove("active")
+    });
+    this.classList.add("active");
 });
-$("#layout_switch button:nth-child(3)").on("click", function () {
-    $("#testLayout").addClass("layout-1");
-    $("body.mobile").removeClass("mobile");
+
+switcher.querySelectorAll("button")[2].addEventListener("click", function () {
+    testLayout.classList.remove("layout-0");
+    body.classList.remove("mobile");
+    testLayout.classList.add("layout-1");
+    buttons.forEach(function (button) {
+        button.classList.remove("active")
+    });
+    this.classList.add("active");
 });
 
 //video select
-$('#celek .video-select .alza-btn').on("click", function(){
-    let videoID = $('#celek .video-select__videoID').val()
-    $('#celek .pp-video iframe').attr('src', 'https://www.youtube.com/embed/' + videoID)
-    videoID.val('')
-    console.log('Video změněno.')
-});
+function videoSelect() {
+    var btn = document.querySelector('#celek .video-select .alza-btn');
 
-console.log('video-select is running')
+    btn.addEventListener('click', function () {
+        var videoID = document.querySelector('#celek .video-select__videoID').value,
+            iframe = document.querySelector('#celek .pp-video iframe');
+
+        iframe.src = 'https://www.youtube.com/embed/' + videoID;
+        document.querySelector('#celek .video-select__videoID').value = '';
+        console.log('Video změněno.');
+    });
+};
+
+
+//run admin functions
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.href.includes("admin") || window.location.href.includes("127")) {
+        videoSelect();
+    };
+});
