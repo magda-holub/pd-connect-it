@@ -18,7 +18,7 @@
   font-weight: 500;
 }
 
-.text__normal {
+.text--normal {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -29,20 +29,17 @@
   line-height: 32.5px;
   font-weight: 700;
 }
-
 .layout-0 #celek .hdl3 {
   font-size: 22px;
   line-height: 27.5px;
   font-weight: 500;
 }
-
 .layout-0 #celek .hdl4 {
   font-size: 14px;
   line-height: 17.5px;
   font-weight: 500;
 }
-
-.layout-0 #celek .text__normal {
+.layout-0 #celek .text--normal {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -67,47 +64,37 @@
     line-height: 17.5px;
     font-weight: 500;
   }
-  .mobile #celek .text__normal,
-  .mobileapp #celek .text__normal {
+  .mobile #celek .text--normal,
+  .mobileapp #celek .text--normal {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
   }
 }
-
 #celek {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #ffffff;
   color: #212121;
 }
-
 #celek *, #celek *::before, #celek *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 #celek h1, #celek h2, #celek h3, #celek h4, #celek p, #celek ul, #celek ol, #celek li, #celek figure {
   margin: 0;
   padding: 0;
 }
-
 #celek input, #celek button, #celek textarea, #celek select {
   font: inherit;
 }
-
 #celek .hidden {
   display: none !important;
 }
-
 #celek.blank p {
   margin-top: 0;
 }
-
 #celek a {
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
-
 #celek img {
   display: block;
   height: auto;
@@ -116,33 +103,25 @@
   border-radius: 4px;
 }
 
-#celek .alza-btn__green {
+#celek .alza-btn--green {
   background-color: #a1c900;
   color: #ffffff;
 }
-
-#celek .alza-btn__green:hover {
+#celek .alza-btn--green:hover {
   background-color: #88aa00;
-  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
 }
-
-#celek .alza-btn__green:active {
+#celek .alza-btn--green:active {
   background-color: #708c00;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
-#celek .alza-btn__green__disabled {
+#celek .alza-btn--green--disabled {
   background-color: rgba(161, 201, 0, 0.5);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
-#celek .alza-btn__normal__fixed {
+#celek .alza-btn--normal--fixed {
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
   height: 42px;
   line-height: 42px;
   font-size: 14px;
@@ -151,7 +130,6 @@
   font-weight: 500;
   display: inline-block;
   border: none;
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   cursor: pointer;
   padding: 0 15px;
@@ -169,10 +147,9 @@
   height: 100% !important;
 }
 
-#celek .video-select .text__normal {
+#celek .video-select .text--normal {
   margin: 16px;
 }
-
 #celek .video-select__videoID {
   padding: 8px 14px;
   width: 120px;
@@ -182,31 +159,47 @@
   margin: auto;
   width: 180px;
 }
-
 #celek .alza-btn {
   margin-top: 24px;
 }
 
 #layout_switch {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   left: 20px;
   top: 20px;
   z-index: 100;
+  width: 180px;
+  height: 70px;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.3);
+  border-radius: 5px;
 }
-
 #layout_switch button {
-  display: block;
-  color: #fff;
-  background: #ff4757;
-  font-size: 10px;
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  margin-bottom: 5px;
-  border: 2px solid #E23140;
-  -webkit-box-shadow: 0px 4px 10px 0px rgba(255, 71, 86, 0.6);
-          box-shadow: 0px 4px 10px 0px rgba(255, 71, 86, 0.6);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
   cursor: pointer;
+  border: none;
+}
+#layout_switch button .icon {
+  width: 30px;
+  height: 30px;
+  fill: #737373;
+}
+#layout_switch button.active {
+  box-shadow: inset 0px 2px 4px 0px rgba(128, 128, 128, 0.7);
 }
 
 #celek {
@@ -217,8 +210,7 @@
   background: #FFFFFF;
   font-size: 16px;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -230,172 +222,99 @@
   width: 975px;
 }
 
-.mobile #celek .flex-container {
+.mobile #celek,
+.flex-container {
   max-width: 100%;
 }
 
-body {
-  background-color: #ecf5fe;
-}
-
 #celek {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   background-color: #ffffff;
   color: #212121;
   position: relative;
 }
-
 #celek .pp-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 48px;
   padding: 48px 0;
 }
-
 #celek .pp-column {
   padding: 0 136px;
 }
-
 #celek .pp-awards {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 92px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
-#celek .pp-awards--image {
+#celek .pp-awards__image {
   height: 160px;
   width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
-
-#celek .pp-awards--image img {
+#celek .pp-awards__image img {
   max-width: 300px;
   max-height: 160px;
 }
-
 #celek .pp-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 32px;
 }
-
 #celek .pp-plaintext {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 24px;
 }
-
 #celek .pp-multipletexts {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 48px;
 }
-
-#celek .pp-multipletexts--unit {
+#celek .pp-multipletexts__unit {
   width: calc((100% - 48px) / 2);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 24px;
 }
-
-#celek .pp-multipletexts--headline {
+#celek .pp-multipletexts__headline {
   height: 48px;
 }
-
 #celek .pp-video {
   padding: 48px 136px;
   background-color: #f4f5f5;
   position: relative;
 }
-
-#celek .pp-video--container {
+#celek .pp-video__container {
   position: relative;
   padding-top: 56.25%;
   height: 0;
   z-index: 10;
-  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-
-#celek .pp-video--container:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+#celek .pp-video__container:hover {
+  transform: scale(1.05);
 }
-
-#celek .pp-video--container:hover + .pp-video--overlay {
+#celek .pp-video__container:hover + .pp-video__overlay {
   opacity: 30%;
   visibility: visible;
 }
-
-#celek .pp-video--container iframe {
+#celek .pp-video__container iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -405,14 +324,11 @@ body {
   margin: 0 auto;
   border-radius: 4px;
   border: 10px solid #fff;
-  -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
-#celek .pp-video--overlay {
+#celek .pp-video__overlay {
   visibility: hidden;
   opacity: 0;
   background-color: #000000;
@@ -421,168 +337,92 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-
 #celek .pp-zigzag {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 48px;
 }
-
-#celek .pp-zigzag--unit {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#celek .pp-zigzag__unit {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 48px;
 }
-
-#celek .pp-zigzag--unit:nth-child(odd) .pp-zigzag--caption {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+#celek .pp-zigzag__unit:nth-child(odd) .pp-zigzag__caption {
+  order: 1;
 }
-
-#celek .pp-zigzag--image, #celek .pp-zigzag--caption {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
+#celek .pp-zigzag__image, #celek .pp-zigzag__caption {
+  flex: 1 1 0;
 }
-
-#celek .pp-zigzag--image {
-  -webkit-transition: all 300ms ease-in-out;
+#celek .pp-zigzag__image {
   transition: all 300ms ease-in-out;
 }
-
-#celek .pp-zigzag--image:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+#celek .pp-zigzag__image:hover {
+  transform: scale(1.05);
 }
-
-#celek .pp-zigzag--caption {
+#celek .pp-zigzag__caption {
   background-color: #f4f5f5;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
   gap: 24px;
 }
-
-#celek .pp-zigzag--caption h3 {
+#celek .pp-zigzag__caption h3 {
   margin: 48px 48px 0 48px;
 }
-
-#celek .pp-zigzag--caption p {
+#celek .pp-zigzag__caption p {
   margin: 0 48px 48px 48px;
 }
-
 #celek .pp-features {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 24px;
   text-align: left;
 }
-
-#celek .pp-features--headline {
+#celek .pp-features__headline {
   width: 100%;
   background-color: #f4f5f5;
   padding: 24px 48px;
 }
-
-#celek .pp-features--unit {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#celek .pp-features__unit {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
   gap: 48px;
 }
-
-#celek .pp-features--img, #celek .pp-features--list {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
+#celek .pp-features__img, #celek .pp-features__list {
+  flex: 1 1 0;
 }
-
-#celek .pp-features--list {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#celek .pp-features__list {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 24px;
   list-style-type: none;
 }
-
-#celek .pp-features--listitem {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#celek .pp-features__listitem {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 12px;
 }
-
-#celek .pp-features--listitem:hover .pp-features--marker span {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+#celek .pp-features__listitem:hover .pp-features__marker span {
+  transform: rotate(90deg);
 }
-
-#celek .pp-features--listitem:hover .pp-features--marker span:nth-of-type(2) {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+#celek .pp-features__listitem:hover .pp-features__marker span:nth-of-type(2) {
+  transform: rotate(180deg);
 }
-
-#celek .pp-features--marker {
+#celek .pp-features__marker {
   position: relative;
   margin-right: 16px;
 }
-
-#celek .pp-features--marker span {
+#celek .pp-features__marker span {
   width: 12px;
   height: 2px;
   background-color: #01A8A9;
@@ -590,79 +430,48 @@ body {
   position: absolute;
   top: 12px;
   left: 0;
-  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-
-#celek .pp-features--marker span:nth-of-type(2) {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+#celek .pp-features__marker span:nth-of-type(2) {
+  transform: rotate(90deg);
 }
-
 #celek .pp-specs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 24px;
   text-align: left;
 }
-
-#celek .pp-specs--headline {
+#celek .pp-specs__headline {
   width: 100%;
   background-color: #f4f5f5;
   padding: 24px 48px;
 }
-
-#celek .pp-specs--list {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#celek .pp-specs__list {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 24px;
   list-style-type: none;
   margin-left: 20px;
 }
-
-#celek .pp-specs--listitem {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#celek .pp-specs__listitem {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 12px;
 }
-
-#celek .pp-specs--listitem:hover .pp-specs--marker span {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+#celek .pp-specs__listitem:hover .pp-specs__marker span {
+  transform: rotate(90deg);
 }
-
-#celek .pp-specs--listitem:hover .pp-specs--marker span:nth-of-type(2) {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+#celek .pp-specs__listitem:hover .pp-specs__marker span:nth-of-type(2) {
+  transform: rotate(180deg);
 }
-
-#celek .pp-specs--marker {
+#celek .pp-specs__marker {
   position: relative;
   margin-right: 16px;
 }
-
-#celek .pp-specs--marker span {
+#celek .pp-specs__marker span {
   width: 12px;
   height: 2px;
   background-color: #01A8A9;
@@ -670,24 +479,19 @@ body {
   position: absolute;
   top: 12px;
   left: 0;
-  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-
-#celek .pp-specs--marker span:nth-of-type(2) {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+#celek .pp-specs__marker span:nth-of-type(2) {
+  transform: rotate(90deg);
 }
 
 .layout-0 #celek .pp-column {
   padding: 0 48px;
 }
-
 .layout-0 #celek .pp-video {
   padding: 48px;
 }
-
-.layout-0 #celek .pp-features--marker span, .layout-0 #celek .pp-specs--marker span {
+.layout-0 #celek .pp-features__marker span, .layout-0 #celek .pp-specs__marker span {
   top: 10px;
 }
 
@@ -700,18 +504,18 @@ body {
   .mobileapp #celek .pp-awards {
     gap: 48px;
   }
-  .mobile #celek .pp-awards--image,
-  .mobileapp #celek .pp-awards--image {
+  .mobile #celek .pp-awards__image,
+  .mobileapp #celek .pp-awards__image {
     height: 96px;
     width: 200px;
   }
-  .mobile #celek .pp-awards--image img,
-  .mobileapp #celek .pp-awards--image img {
+  .mobile #celek .pp-awards__image img,
+  .mobileapp #celek .pp-awards__image img {
     max-width: 200px;
     max-height: 96px;
   }
-  .mobile #celek .pp-multipletexts--headline,
-  .mobileapp #celek .pp-multipletexts--headline {
+  .mobile #celek .pp-multipletexts__headline,
+  .mobileapp #celek .pp-multipletexts__headline {
     height: 60px;
   }
   .mobile #celek .pp-video,
@@ -719,13 +523,12 @@ body {
     padding: 0 32px;
     background-color: #ffffff;
   }
-  .mobile #celek .pp-video--container:hover,
-  .mobileapp #celek .pp-video--container:hover {
-    -webkit-transform: none;
-            transform: none;
+  .mobile #celek .pp-video__container:hover,
+  .mobileapp #celek .pp-video__container:hover {
+    transform: none;
   }
-  .mobile #celek .pp-video--overlay,
-  .mobileapp #celek .pp-video--overlay {
+  .mobile #celek .pp-video__overlay,
+  .mobileapp #celek .pp-video__overlay {
     display: none;
   }
   .mobile #celek .pp-zigzag,
@@ -733,62 +536,48 @@ body {
     background-color: #f4f5f5;
     padding: 48px 32px;
   }
-  .mobile #celek .pp-zigzag--unit,
-  .mobileapp #celek .pp-zigzag--unit {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .mobile #celek .pp-zigzag__unit,
+  .mobileapp #celek .pp-zigzag__unit {
+    flex-direction: column;
   }
-  .mobile #celek .pp-zigzag--unit:nth-child(odd) .pp-zigzag--caption,
-  .mobileapp #celek .pp-zigzag--unit:nth-child(odd) .pp-zigzag--caption {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+  .mobile #celek .pp-zigzag__unit:nth-child(odd) .pp-zigzag__caption,
+  .mobileapp #celek .pp-zigzag__unit:nth-child(odd) .pp-zigzag__caption {
+    order: 0;
   }
-  .mobile #celek .pp-zigzag--caption h3, .mobile #celek .pp-zigzag--caption p,
-  .mobileapp #celek .pp-zigzag--caption h3,
-  .mobileapp #celek .pp-zigzag--caption p {
+  .mobile #celek .pp-zigzag__caption h3, .mobile #celek .pp-zigzag__caption p,
+  .mobileapp #celek .pp-zigzag__caption h3,
+  .mobileapp #celek .pp-zigzag__caption p {
     margin: 0;
   }
-  .mobile #celek .pp-zigzag--image:hover,
-  .mobileapp #celek .pp-zigzag--image:hover {
-    -webkit-transform: none;
-            transform: none;
+  .mobile #celek .pp-zigzag__image:hover,
+  .mobileapp #celek .pp-zigzag__image:hover {
+    transform: none;
   }
-  .mobile #celek .pp-features--unit,
-  .mobileapp #celek .pp-features--unit {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .mobile #celek .pp-features__unit,
+  .mobileapp #celek .pp-features__unit {
+    flex-direction: column;
   }
-  .mobile #celek .pp-features--list,
-  .mobileapp #celek .pp-features--list {
+  .mobile #celek .pp-features__list,
+  .mobileapp #celek .pp-features__list {
     margin-left: 20px;
   }
-  .mobile #celek .pp-features--marker span, .mobile #celek .pp-specs--marker span,
-  .mobileapp #celek .pp-features--marker span,
-  .mobileapp #celek .pp-specs--marker span {
+  .mobile #celek .pp-features__marker span, .mobile #celek .pp-specs__marker span,
+  .mobileapp #celek .pp-features__marker span,
+  .mobileapp #celek .pp-specs__marker span {
     top: 10px;
   }
 }
-
 @media only screen and (max-width: 600px) {
   .mobile #celek .pp-awards,
   .mobileapp #celek .pp-awards {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .mobile #celek .pp-multipletexts,
   .mobileapp #celek .pp-multipletexts {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
-  .mobile #celek .pp-multipletexts--unit,
-  .mobileapp #celek .pp-multipletexts--unit {
+  .mobile #celek .pp-multipletexts__unit,
+  .mobileapp #celek .pp-multipletexts__unit {
     width: 100%;
   }
   .mobile #celek .pp-video,
@@ -797,34 +586,32 @@ body {
   }
   .mobile #celek .pp-video iframe,
   .mobileapp #celek .pp-video iframe {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
 }
-
 @media only screen and (max-width: 400px) {
-  .mobile #celek .pp-features--headline,
-  .mobileapp #celek .pp-features--headline {
+  .mobile #celek .pp-features__headline,
+  .mobileapp #celek .pp-features__headline {
     padding: 24px;
   }
-  .mobile #celek .pp-features--list,
-  .mobileapp #celek .pp-features--list {
+  .mobile #celek .pp-features__list,
+  .mobileapp #celek .pp-features__list {
     margin-left: 0;
   }
-  .mobile #celek .pp-features--listitem,
-  .mobileapp #celek .pp-features--listitem {
+  .mobile #celek .pp-features__listitem,
+  .mobileapp #celek .pp-features__listitem {
     gap: 7px;
   }
-  .mobile #celek .pp-specs--headline,
-  .mobileapp #celek .pp-specs--headline {
+  .mobile #celek .pp-specs__headline,
+  .mobileapp #celek .pp-specs__headline {
     padding: 24px;
   }
-  .mobile #celek .pp-specs--list,
-  .mobileapp #celek .pp-specs--list {
+  .mobile #celek .pp-specs__list,
+  .mobileapp #celek .pp-specs__list {
     margin-left: 0;
   }
-  .mobile #celek .pp-specs--listitem,
-  .mobileapp #celek .pp-specs--listitem {
+  .mobile #celek .pp-specs__listitem,
+  .mobileapp #celek .pp-specs__listitem {
     gap: 7px;
   }
 }
