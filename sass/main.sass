@@ -1,4 +1,3 @@
-@import ../sass/partials/trial
 @import ../sass/partials/mixins
 @import ../sass/partials/colors
 @import ../sass/partials/type
@@ -7,11 +6,6 @@
 @import ../sass/partials/addons
 @import ../sass/partials/video-select
 @import ../sass/partials/switcher
-
-
-//preview - TO REMOVE!
-body
-    background-color: $c-blue-light
 
 #celek
     @include roboto
@@ -36,7 +30,7 @@ body
             justify-content: center
             align-items: center
 
-            &--image
+            &__image
                 height: 160px
                 width: 300px
                 @include flexOr
@@ -64,12 +58,12 @@ body
             justify-content: center
             gap: 48px
 
-            &--unit
+            &__unit
                 width: calc((100% - 48px) / 2 )
                 @include flexVert
                 gap: 24px
 
-            &--headline
+            &__headline
                 height: 48px
 
         //video
@@ -78,7 +72,7 @@ body
             background-color: $c-grey-1
             position: relative
 
-            &--container
+            &__container
                 position: relative
                 padding-top: 56.25%
                 height: 0
@@ -88,7 +82,7 @@ body
                 &:hover
                     transform: scale(1.05)
 
-                    & + .pp-video--overlay
+                    & + .pp-video__overlay
                         opacity: 30%
                         visibility: visible
 
@@ -106,7 +100,7 @@ body
                     left: 50%
                     transform: translateX(-50%)
             
-            &--overlay
+            &__overlay
                 visibility: hidden
                 opacity: 0
                 background-color: $c-black
@@ -122,23 +116,23 @@ body
             @include flexVert
             gap: 48px
 
-            &--unit
+            &__unit
                 @include flexOr
                 gap: 48px
 
-                &:nth-child(odd) .pp-zigzag--caption
+                &:nth-child(odd) .pp-zigzag__caption
                     order: 1
             
-            &--image, &--caption
+            &__image, &__caption
                     flex: 1 1 0
 
-            &--image
+            &__image
                 transition: all 300ms ease-in-out
 
                 &:hover
                     transform: scale(1.05)
 
-            &--caption
+            &__caption
                 background-color: $c-grey-1
                 @include flexVert
                 justify-content: center
@@ -156,35 +150,35 @@ body
             gap: 24px
             text-align: left
 
-            &--headline
+            &__headline
                 width: 100%
                 background-color: $c-grey-1
                 padding: 24px 48px
 
-            &--unit
+            &__unit
                 @include flexOr
                 align-items: center
                 gap: 48px
 
-            &--img, &--list
+            &__img, &__list
                     flex: 1 1 0
 
-            &--list
+            &__list
                 @include flexVert
                 gap: 24px
                 list-style-type: none
 
-            &--listitem
+            &__listitem
                 @include flexOr
                 gap: 12px
 
-                &:hover .pp-features--marker span
+                &:hover .pp-features__marker span
                     transform: rotate(90deg)
 
                     &:nth-of-type(2)
                         transform: rotate(180deg)
                         
-            &--marker
+            &__marker
                 position: relative
                 margin-right: 16px
 
@@ -207,28 +201,28 @@ body
             gap: 24px
             text-align: left
 
-            &--headline
+            &__headline
                 width: 100%
                 background-color: $c-grey-1
                 padding: 24px 48px
 
-            &--list
+            &__list
                 @include flexVert
                 gap: 24px
                 list-style-type: none
                 margin-left: 20px
 
-            &--listitem
+            &__listitem
                 @include flexOr
                 gap: 12px
 
-                &:hover .pp-specs--marker span
+                &:hover .pp-specs__marker span
                     transform: rotate(90deg)
 
                     &:nth-of-type(2)
                         transform: rotate(180deg)
 
-            &--marker
+            &__marker
                 position: relative
                 margin-right: 16px
 
@@ -254,7 +248,7 @@ body
         &-video
             padding: 48px
                         
-        &-features--marker span, &-specs--marker span
+        &-features__marker span, &-specs__marker span
             top: 10px
 
 //querries
@@ -268,7 +262,7 @@ body
             &-awards
                 gap: 48px
 
-                &--image
+                &__image
                     height: 96px
                     width: 200px
 
@@ -277,44 +271,44 @@ body
                         max-height: 96px
 
             &-multipletexts
-                &--headline
+                &__headline
                     height: 60px
 
             &-video
                 padding: 0 32px
                 background-color: $c-white
 
-                &--container:hover
+                &__container:hover
                     transform: none
 
-                &--overlay
+                &__overlay
                     display: none
 
             &-zigzag
                 background-color: $c-grey-1
                 padding: 48px 32px
 
-                &--unit
+                &__unit
                     flex-direction: column
 
-                    &:nth-child(odd) .pp-zigzag--caption
+                    &:nth-child(odd) .pp-zigzag__caption
                         order: 0
 
-                &--caption
+                &__caption
                     h3, p
                         margin: 0
 
-                &--image:hover
+                &__image:hover
                     transform: none
 
             &-features
-                &--unit
+                &__unit
                     flex-direction: column
                 
-                &--list
+                &__list
                     margin-left: 20px
 
-            &-features--marker span, &-specs--marker span
+            &-features__marker span, &-specs__marker span
                 top: 10px
 
 @media only screen and (max-width: 600px)
@@ -327,7 +321,7 @@ body
             &-multipletexts
                 flex-direction: column
 
-                &--unit
+                &__unit
                     width: 100%
 
             &-video
@@ -341,21 +335,21 @@ body
     .mobileapp #celek
         .pp
             &-features
-                &--headline
+                &__headline
                     padding: 24px
 
-                &--list
+                &__list
                     margin-left: 0
 
-                &--listitem
+                &__listitem
                     gap: 7px
 
             &-specs
-                &--headline
+                &__headline
                     padding: 24px
 
-                &--list
+                &__list
                     margin-left: 0
 
-                &--listitem
+                &__listitem
                     gap: 7px
